@@ -11,14 +11,21 @@ import UIKit
 // 프로토콜을 상속받으면 프로토콜에서 정의한 함수를 무조건 만들어야함 그렇지 않으면 에러 발생
 class ViewController: UIViewController, EditDelegate {
   
-    
+    let imgOn = UIImage(named: "lamp_on.png")
+    let imgOff = UIImage(named: "lamp_off.png")
 
+    var isOn = true
+    
     @IBOutlet var txMessage: UITextField!
+    @IBOutlet var imgView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        // 스토리보드에 추가한 오브젝트 이미지뷰에 위에서 선언한 imgOn을 대입
+        // 앱시작시 imgOn 이미지가 보일 것임
+        imgView.image = imgOn
         
     }
     
@@ -41,6 +48,9 @@ class ViewController: UIViewController, EditDelegate {
             editViewController.textWayValue = "segue : use Bar Button"
         }
         editViewController.textMessage = txMessage.text!
+        
+        //prepare 함수에서 editViewController 수정화면의 ison에 메인화면의 상태를 전달한다
+        editViewController.isOn = isOn
         editViewController.delegate = self
     }
 
@@ -50,7 +60,16 @@ class ViewController: UIViewController, EditDelegate {
     func didMessageEditDone(_ controller: EditViewController, message: String) {
         txMessage.text = message
     }
-    
+    func didImageOnOffDone(_ controller: EditViewController, isOn: Bool) {
+        if isOn {
+            imgView.image = imgOn
+            self.isOn = true
+        } else {
+            imgView.image = imgOff
+            self.isOn = false
+        }
+        
+    }
     
 }
 

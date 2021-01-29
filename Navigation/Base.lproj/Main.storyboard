@@ -37,6 +37,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iyX-3U-PNo">
+                                <rect key="frame" x="16" y="254" width="244" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -49,6 +53,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgView" destination="iyX-3U-PNo" id="Y1z-kP-vEB"/>
                         <outlet property="txMessage" destination="p1f-ei-l2c" id="23R-UW-Olj"/>
                     </connections>
                 </viewController>
@@ -80,18 +85,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyD-LA-MLw">
-                                <rect key="frame" x="20" y="125" width="89" height="54"/>
+                                <rect key="frame" x="20" y="145" width="89" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPI-oX-01h">
-                                <rect key="frame" x="20" y="170" width="350" height="34"/>
+                                <rect key="frame" x="20" y="190" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="878-yp-rTq">
+                                <rect key="frame" x="308" y="133" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="swImageOnOff:" destination="dQR-wn-3Tw" eventType="valueChanged" id="rwN-Mq-f1e"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="켜기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-cr-p7v">
+                                <rect key="frame" x="270" y="138" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jWS-9A-bh7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -99,6 +118,7 @@
                     <navigationItem key="navigationItem" title="수정화면" id="NJw-sa-hi3"/>
                     <connections>
                         <outlet property="lblWay" destination="kQN-8D-QMF" id="inN-SP-Hed"/>
+                        <outlet property="swIsOn" destination="878-yp-rTq" id="k8Z-ZM-rCh"/>
                         <outlet property="txMessage" destination="WPI-oX-01h" id="Evq-8z-OYI"/>
                     </connections>
                 </viewController>

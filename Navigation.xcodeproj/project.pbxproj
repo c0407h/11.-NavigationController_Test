@@ -14,6 +14,8 @@
 		57557F0025C43A150020D43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57557EFF25C43A150020D43D /* Assets.xcassets */; };
 		57557F0325C43A150020D43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57557F0125C43A150020D43D /* LaunchScreen.storyboard */; };
 		57557F0C25C43E670020D43D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57557F0B25C43E670020D43D /* EditViewController.swift */; };
+		57557F1025C459D10020D43D /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 57557F0E25C459D10020D43D /* lamp_on.png */; };
+		57557F1125C459D10020D43D /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 57557F0F25C459D10020D43D /* lamp_off.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		57557F0225C43A150020D43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57557F0425C43A150020D43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57557F0B25C43E670020D43D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		57557F0E25C459D10020D43D /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lamp_on.png; path = "../../Doit!_스위프트로아이폰앱만들기입문_개정5판_소스/3장/본문실습이미지/lamp_on.png"; sourceTree = "<group>"; };
+		57557F0F25C459D10020D43D /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lamp_off.png; path = "../../Doit!_스위프트로아이폰앱만들기입문_개정5판_소스/3장/본문실습이미지/lamp_off.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		57557EF525C43A140020D43D /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				57557F0F25C459D10020D43D /* lamp_off.png */,
+				57557F0E25C459D10020D43D /* lamp_on.png */,
 				57557EF625C43A140020D43D /* AppDelegate.swift */,
 				57557EF825C43A140020D43D /* SceneDelegate.swift */,
 				57557EFA25C43A140020D43D /* ViewController.swift */,
@@ -127,7 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57557F1025C459D10020D43D /* lamp_on.png in Resources */,
 				57557F0325C43A150020D43D /* LaunchScreen.storyboard in Resources */,
+				57557F1125C459D10020D43D /* lamp_off.png in Resources */,
 				57557F0025C43A150020D43D /* Assets.xcassets in Resources */,
 				57557EFE25C43A140020D43D /* Main.storyboard in Resources */,
 			);
